@@ -12,10 +12,10 @@ patchesStrategicMerge:
     metadata:
       name: codefresh-cm
     data:
-      ingressHost: http://roi-codefresh-ingresshost.ngrok.io
+      ingressHost: http://daniel-ingresshost.ngrok.io
       ingressClassName: nginx
       ingressController: k8s.io/ingress-nginx
-      cluster: https://DB8EBB6B51269A736DB538F8272F96DB.yl4.us-east-1.eks.amazonaws.com
+      cluster: https://kubernetes.default.svc
 
 patches:
   - target:
@@ -38,7 +38,7 @@ patches:
             "directories": [
               { "path": "runtimes/codefresh4/apps/*" }
             ],
-            "repoURL": "https://github.com/roi-codefresh/csdp-runtimes.git",
+            "repoURL": "https://github.com/danielm-codefresh/csdp-runtimes.git",
             "revision": "HEAD",
             "requeueAfterSeconds": 15,
             "template": {
@@ -54,7 +54,7 @@ patches:
                   "repoURL": "",
                   "kustomize": {
                     "components": [
-                      "https://github.com/roi-codefresh/csdp-runtimes.git/{{path}}"
+                      "https://github.com/danielm-codefresh/csdp-runtimes.git/{{path}}"
                     ]
                   }
                 }
@@ -70,7 +70,7 @@ patches:
             "directories": [
               { "path": "runtimes/codefresh4/apps/argo-cd" }
             ],
-            "repoURL": "https://github.com/roi-codefresh/csdp-runtimes.git",
+            "repoURL": "https://github.com/danielm-codefresh/csdp-runtimes.git",
             "revision": "HEAD",
             "requeueAfterSeconds": 15,
             "template": {
@@ -82,7 +82,7 @@ patches:
                   "repoURL": "",
                   "kustomize": {
                     "components": [
-                      "https://github.com/roi-codefresh/csdp-runtimes.git/{{path}}"
+                      "https://github.com/danielm-codefresh/csdp-runtimes.git/{{path}}"
                     ]
                   }
                 }

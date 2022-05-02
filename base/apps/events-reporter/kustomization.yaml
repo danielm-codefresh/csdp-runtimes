@@ -5,7 +5,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/triggers/0/template/http/url
-        value: http://roi-codefresh-platform.ngrok.io/2.0/api/events
+        value: http://daniel-cf-url.ngrok.io/2.0/api/events
     target:
       group: argoproj.io
       version: v1alpha1
